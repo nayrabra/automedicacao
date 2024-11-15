@@ -65,7 +65,7 @@ body {
 .custom_heading::before {
   position: absolute;
   content: "";
-  left: -45px;
+  left: -37px;
   width: 37px;
   height: 32px;
   background-image: url(../images/herbal.png);
@@ -194,6 +194,7 @@ article {
 h2 {
   color: #069119;
   margin-top: 20px;
+  margin-left: 30px;
 }
 /*end header section*/
 .hero_section {
@@ -209,7 +210,7 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 75%;
+  height: 50%;
 }
 
 .hero_section h1 {
@@ -620,7 +621,7 @@ article {
 ul {
   list-style-type: square;
   padding-left: 20px;
-  
+
 }
 
 
@@ -630,23 +631,37 @@ ul {
   margin-left: 10px;
   margin-bottom: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+  transition: max-height 0.6s ease, padding 0.6s ease;
   overflow: hidden;
   cursor: pointer;
   padding: 15px;
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 .card-content {
   display: none;
-  padding: 10px;
   background: #f9f9f9;
   border-radius: 8px;
+  margin-bottom: 15px;
 }
+
+@media (max-width: 480px) {
+  .card-content {
+    display: none;
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 500px;
+  }
+}
+
+.card.open .card-content {
+  display: block;
+}
+
 
 .card h3 {
   background: #97f271;
@@ -658,11 +673,16 @@ ul {
 }
 
 .card.open .card-content {
-  display: block; 
-  max-height: 200px; 
+  display: block;
+  max-height: 200px;
 }
 
 .card.open {
-  opacity: 0.9; 
+  opacity: 0.9;
+}
+
+.form-title {
+  color: white;
+  font-size: 2.5em;
 }
 
